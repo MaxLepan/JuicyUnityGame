@@ -11,6 +11,7 @@ public class ObstacleMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.AddForce(Vector3.back * forwardForce);
+        //rb.AddForce(Vector3.back * forwardForce);
+        rb.velocity = Vector3.back * forwardForce;
     }
 }
