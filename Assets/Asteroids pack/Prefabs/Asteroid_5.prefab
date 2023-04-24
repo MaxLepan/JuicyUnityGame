@@ -15,9 +15,10 @@ GameObject:
   - component: {fileID: 7731959010310445265}
   - component: {fileID: 3229530176586198827}
   - component: {fileID: 8893956845264898432}
+  - component: {fileID: 4537867985089242570}
   m_Layer: 0
   m_Name: Asteroid_5
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31,8 +32,8 @@ Transform:
   m_GameObject: {fileID: 6123279987556253554}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -5.94, y: 0.10764115, z: -0.0007337332}
-  m_LocalScale: {x: 124.54529, y: 124.54529, z: 124.54529}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 100.5453, y: 100.5453, z: 100.5453}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -142,3 +143,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ed12fe2fd15f8e429698d320285fc1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &4537867985089242570
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6123279987556253554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.01
+  m_Center: {x: -0.0000000023283067, y: -0.0000000018626449, z: 0}
