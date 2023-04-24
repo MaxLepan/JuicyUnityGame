@@ -6,14 +6,9 @@ public class ObstacleSpawner : MonoBehaviour
 {
 
     [SerializeField] public Transform[] spawnPoints;
-    /*
-    [SerializeField] public GameObject obstaclePrefab1;
-    [SerializeField] public GameObject obstaclePrefab2;
-    [SerializeField] public GameObject obstaclePrefab3;
-    [SerializeField] public GameObject obstaclePrefab4;
-    [SerializeField] public GameObject obstaclePrefab5;
-    */
     [SerializeField] public GameObject[] obstaclePrefabs;
+    [SerializeField] public float minSize = 70.0f;
+    [SerializeField] public float maxSize = 100.0f;
     
     [Header("Timers")]
 
@@ -52,7 +47,9 @@ public class ObstacleSpawner : MonoBehaviour
             if (i != randomIndex)
             {
                 int randomPrefab = Random.Range(0, obstaclePrefabs.Length - 1);
-                Instantiate(obstaclePrefabs[randomPrefab], spawnPoints[i].position, Quaternion.identity);
+                float randomSize = Random.Range(minSize, maxSize);
+                Vector3 randomScale = new Vector3(randomSize, randomSize, randomSize);
+                Instantiate(obstaclePrefabs[randomPrefab], spawnPoints[i].position, Quaternion.identity).transform.localScale = randomScale;
             }
         }
         

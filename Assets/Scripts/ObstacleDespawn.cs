@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class ObstacleDespawn : MonoBehaviour
 {
+
+    Renderer myRenderer;
+
+    private void Start()
+    {
+        myRenderer = GetComponent<Renderer>();
+    }
+
     private void Update()
     {
-        if (transform.position.y < 0)
+        if (!myRenderer.isVisible)
         {
             Destroy(gameObject);
         }
