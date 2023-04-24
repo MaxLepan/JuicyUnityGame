@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -753,6 +753,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 883498081}
   sidewaysForce: 30
+  rotationSpeed: 3
+  maxAngle: 20
 --- !u!54 &883498081
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -802,16 +804,12 @@ MonoBehaviour:
   - {fileID: 866157041}
   - {fileID: 1169831618}
   - {fileID: 222632319}
-  obstaclePrefab: {fileID: 2892113730163674056, guid: f228c39055bc9704eb3d3b2ea4598735,
-    type: 3}
+  obstaclePrefabs: []
+  timeToSpawn: 2
+  minTimeBetweenWaves: 0.73
+  maxTimeBetweenWaves: 0.77
   audioSource: {fileID: 1381876563}
-  startTime1: 0
-  endTime1: 15
-  startTime2: 15.1
-  endTime2: 78.5
-  startTime3: 78.6
-  endTime3: 0
-  updateInterval: 0.1
+  beatDetectionThreshold: 0.1
 --- !u!4 &1094118215
 Transform:
   m_ObjectHideFlags: 0
@@ -863,6 +861,7 @@ MonoBehaviour:
   scoreText: {fileID: 482143540}
   timeBeforeRestart: 2
   slowness: 10
+  audioSource: {fileID: 1381876563}
 --- !u!4 &1146466179
 Transform:
   m_ObjectHideFlags: 0
@@ -1151,16 +1150,17 @@ MonoBehaviour:
   - {fileID: 866157041}
   - {fileID: 1169831618}
   - {fileID: 222632319}
-  obstaclePrefab: {fileID: 2892113730163674056, guid: f228c39055bc9704eb3d3b2ea4598735,
-    type: 3}
+  obstaclePrefabs:
+  - {fileID: 2942051580892192243, guid: d57d6419728ca4fa486055a9b54eb326, type: 3}
+  - {fileID: 3539412230784186596, guid: 607f852e894b2474e8037bde96a3f38c, type: 3}
+  - {fileID: 8003495884289897023, guid: 2408f749a3ad04e23b2abe82997c4b61, type: 3}
+  - {fileID: 3712215468181072183, guid: e0cfb534d47614c7b825642df2d44a40, type: 3}
+  - {fileID: 6123279987556253554, guid: 543f85c367b24464098124fcc11a6955, type: 3}
+  timeToSpawn: 2
+  minTimeBetweenWaves: 0.73
+  maxTimeBetweenWaves: 0.77
   audioSource: {fileID: 1381876563}
-  startTime1: 0
-  endTime1: 15
-  startTime2: 15.1
-  endTime2: 78.5
-  startTime3: 78.6
-  endTime3: 0
-  updateInterval: 0.1
+  beatDetectionThreshold: 0.01
 --- !u!1001 &1543909658
 PrefabInstance:
   m_ObjectHideFlags: 0

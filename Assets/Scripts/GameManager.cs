@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] TextMeshPro scoreText;
     [SerializeField] float timeBeforeRestart = 2;
     [SerializeField] float slowness = 10;
+    [SerializeField] AudioSource audioSource;
 
     bool isGameEnded = false;
 
@@ -34,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f / slowness;
         Time.fixedDeltaTime = Time.fixedDeltaTime / slowness;
+        audioSource.pitch = audioSource.pitch / slowness * 5;
 
         yield return new WaitForSeconds(timeBeforeRestart / slowness);
 
