@@ -17,16 +17,7 @@ public class ObstacleSpawner : MonoBehaviour
     [SerializeField] float minTimeBetweenWaves = 0.73f;
     [SerializeField] float incrementObstaclePerWave = 0.1f;
 
-    [Header("Audio")]
-
-    [SerializeField] public AudioSource audioSource;
-
     float waveCount = 0f;
-
-    private void Start()
-    {
-        audioSource.Play();
-    }
 
     private void Update()
     {
